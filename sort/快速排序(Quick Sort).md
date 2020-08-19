@@ -312,7 +312,7 @@ $$
 
    $$
    T(n)=\sum_{q=1}^nX_q(T(q-1)+T(n-q)+\Theta(n)) \\
-   E[T(n)]=E[\sum_{q=1}^nX_q(T(q-1)+T(n-q)+\Theta(n))]	
+   E[T(n)]=E[\sum_{q=1}^nX_q(T(q-1)+T(n-q)+\Theta(n))]
    $$
 
    
@@ -343,6 +343,8 @@ $$
             &=\Theta(n)+\frac{2}{n} * \sum_{q=2}^{n}(E[T(q)]) \\ 
    \end {aligned}
    $$
+   实际上，当只有一个元素时可以认为已经排序完成，不需要再次排序。
+   
    4.证明：
    $$
    \sum_{k=2}^{n-1}klogk\leq \frac{1}{2}n^2logn-\frac{1}{8}n^2 \  \ (7.7)
@@ -455,7 +457,7 @@ $$
 
 
 
-
+**答案**
 
 >**a.** $p_i$ is the probability that a randomly selected subset of size three has the $A'[i]$ as it's middle element. There are 6 possible orderings of the three elements selected. So, suppose that $S'$ is the set of three elements selected. We will compute the probability that the second element of $S'$ is $A'[i]$ among all possible $3$-sets we can pick, since there are exactly six ordered $3$-sets corresponding to each $3$-set, these probabilities will be equal. We will compute the probability that $S'[2] = A[i]$. 
 >
